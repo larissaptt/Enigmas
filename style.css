@@ -1,47 +1,36 @@
-.apagado{
-    color: black;
-    word-break: break-word;
-}
 *{
     background-color: black;
     color: beige;
+    padding: 3%;
 }
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     font-size: 15px;
 }
-.all{
-    width: 50%;
+h1{
+    font-size: 27px;
+    color: rgb(105, 0, 167);
 }
-input, button{
-    border: 2px solid rgb(60, 0, 95);
-    border-radius: 20px;
-    width: 100%;
-    height: 30px;
-}
-::placeholder {
-    color: rgb(120, 120, 120);
-    opacity: 0.8; /* deixa mais visível */
-}
-button{
-    background-color: rgb(105, 0, 167);
-    margin-top: 40px;
-}
-#cronometro {
-    position: fixed;
-    bottom: 0;
-    right: 0; /* ou left: 0 se quiser do outro lado */
-    padding: 10px;
-}
-span{
+.pequeno{
     font-size: 10px;
     color: rgb(88, 88, 88);
     background-color: transparent;
 }
-.codigo {
+li{
+    line-height: 0.9;
+}
+button{
+    background-color: rgb(105, 0, 167);
     width: 100%;
-    height: 200px;
+    border: 2px solid rgb(60, 0, 95);
+    margin-top: 40px;
+}
+button:disabled{
+    background-color: rgb(130, 90, 167);
+    border: 2px solid rgb(92, 90, 95);
+}
+input[type="checkbox"] {
+    accent-color: rgb(105, 0, 167);
 }

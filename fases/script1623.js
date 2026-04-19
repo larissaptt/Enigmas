@@ -10,7 +10,7 @@ botao.addEventListener("click", () => {
     let valor = input.value.toLowerCase().trim();
 
     if (valor === respostaCorreta) {
-        msg.textContent = `Acertou! Por enquanto é só isso...`;
+        msg.textContent = `Acertou! Indo para a próxima...`;
         i = 0;
 
         setTimeout(() => {
@@ -20,7 +20,7 @@ botao.addEventListener("click", () => {
         i++;
 
         if (i >= 30) {
-            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'belladonna' (tentativa ${i})`;
+            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental' (tentativa ${i})`;
         }
         else if (i >= 20) {
             msg.textContent = `Sooooooccccoooooorrrrrrooooooo!!!!!! (tentativa ${i})`;
