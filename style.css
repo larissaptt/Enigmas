@@ -20,6 +20,7 @@ h1{
 }
 li{
     line-height: 0.9;
+    text-align: left;
 }
 button{
     background-color: rgb(105, 0, 167);
