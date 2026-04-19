@@ -1,8 +1,8 @@
 const botao = document.getElementById("verificar");
-const input = document.getElementById("answer1604");
+const input = document.getElementById("answer1110");
 const msg = document.getElementById("mensagem");
 
-const respostaCorreta = "a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental";
+const respostaCorreta = "hoje... eu não sou cesar, eu não sou kaiser... eu sou o angel of the night.";
 
 let i = 0;
 
@@ -10,17 +10,17 @@ botao.addEventListener("click", () => {
     let valor = input.value.toLowerCase().trim();
 
     if (valor === respostaCorreta) {
-        msg.textContent = `Acertou! Por enquanto é só isso...`;
+        msg.textContent = `Acertou! Indo para a próxima...`;
         i = 0;
 
         setTimeout(() => {
-            window.location.href = "1405.html";
+            window.location.href = "3110.html";
         }, 1500);
     } else {
         i++;
 
         if (i >= 30) {
-            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'belladonna' (tentativa ${i})`;
+            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'hoje... eu não sou cesar, eu não sou kaiser... eu sou o angel of the night.' (tentativa ${i})`;
         }
         else if (i >= 20) {
             msg.textContent = `Sooooooccccoooooorrrrrrooooooo!!!!!! (tentativa ${i})`;

@@ -1,8 +1,8 @@
 const botao = document.getElementById("verificar");
-const input = document.getElementById("answer1604");
+const input = document.getElementById("answer3110");
 const msg = document.getElementById("mensagem");
 
-const respostaCorreta = "a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental";
+const respostaCorreta = "belladonna";
 
 let i = 0;
 
@@ -10,14 +10,35 @@ botao.addEventListener("click", () => {
     let valor = input.value.toLowerCase().trim();
 
     if (valor === respostaCorreta) {
-        msg.textContent = `Acertou! Por enquanto é só isso...`;
+        msg.textContent = `Acertou! Indo para a próxima...`;
         i = 0;
 
         setTimeout(() => {
-            window.location.href = "1405.html";
+            window.location.href = "2012.html";
         }, 1500);
-    } else {
-        i++;
+        return;
+    }
+
+    // respostas especiais (valem meio ponto)
+    if (valor === 'was war das erste rätsel?') {
+        msg.textContent = `Alemão? Sério? Nem pra traduzir. PREGUÇOSO! (tentativa: ${i})`;
+        i += 0.5;
+    }
+    else if (valor === 'qual era o primeiro enigma?') {
+        msg.textContent = `Anda, responde, qual era? (tentativa: ${i})`;
+        i += 0.5;
+    }
+    else if (
+        valor === 'morse' ||
+        valor === 'morse code' ||
+        valor === 'codigo morse' ||
+        valor === 'código morse'
+    ) {
+        msg.textContent = `Nope, eu quero a resposta, meu bem.(tentativa: ${i})`;
+        i += 0.5;
+    }
+    else {
+        i += 1;
 
         if (i >= 30) {
             msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'belladonna' (tentativa ${i})`;

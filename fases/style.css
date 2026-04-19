@@ -1,3 +1,7 @@
+.apagado{
+    color: black;
+    word-break: break-word;
+}
 *{
     background-color: black;
     color: beige;
@@ -36,4 +40,8 @@ span{
     font-size: 10px;
     color: rgb(88, 88, 88);
     background-color: transparent;
+}
+.codigo {
+    width: 100%;
+    height: 200px;
 }
