@@ -1,8 +1,8 @@
 const botao = document.getElementById("verificar");
-const input = document.getElementById("answer1604");
+const input = document.getElementById("answer0806");
 const msg = document.getElementById("mensagem");
 
-const respostaCorreta = "a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental";
+const respostaCorreta = `"eu vou até o inferno pra te buscar" "eu to no coliseu, vem me buscar..."`;
 
 let i = 0;
 
@@ -14,13 +14,13 @@ botao.addEventListener("click", () => {
         i = 0;
 
         setTimeout(() => {
-            window.location.href = "1405.html";
+            window.location.href = "2806.html";
         }, 1500);
     } else {
         i++;
 
         if (i >= 30) {
-            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental' (tentativa ${i})`;
+            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é '"Eu vou até o inferno pra te buscar" "Eu to no coliseu, vem me buscar..."' (tentativa ${i})`;
         }
         else if (i >= 20) {
             msg.textContent = `Sooooooccccoooooorrrrrrooooooo!!!!!! (tentativa ${i})`;
@@ -39,6 +39,9 @@ botao.addEventListener("click", () => {
         }
         else if (i >= 5) {
             msg.textContent = `Qual é? Vamo decifrar isso! (tentativa ${i})`;
+        }
+        else if (i >= 4){
+            msg.textContent = `Você pôs as ""?. (Testativa ${i})`
         }
         else if (i >= 3) {
             msg.textContent = `Vamos, pensa mais! (tentativa ${i})`;

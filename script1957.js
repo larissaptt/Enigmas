@@ -1,8 +1,8 @@
 const botao = document.getElementById("verificar");
-const input = document.getElementById("answer1604");
+const input = document.getElementById("answer2012");
 const msg = document.getElementById("mensagem");
 
-const respostaCorreta = "a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental";
+const respostaCorreta = "a lua está maravilhosa hoje!";
 
 let i = 0;
 
@@ -10,17 +10,15 @@ botao.addEventListener("click", () => {
     let valor = input.value.toLowerCase().trim();
 
     if (valor === respostaCorreta) {
-        msg.textContent = `Acertou! Indo para a próxima...`;
+        msg.textContent = `PARABÉNS! Mas por hoje é só... olhe seu tempo no canto...`;
         i = 0;
+        clearInterval(window.timer);
 
-        setTimeout(() => {
-            window.location.href = "1405.html";
-        }, 1500);
     } else {
         i++;
 
         if (i >= 30) {
-            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental' (tentativa ${i})`;
+            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'a lua está maravilhosa hoje!' (tentativa ${i})`;
         }
         else if (i >= 20) {
             msg.textContent = `Sooooooccccoooooorrrrrrooooooo!!!!!! (tentativa ${i})`;

@@ -1,8 +1,8 @@
 const botao = document.getElementById("verificar");
-const input = document.getElementById("answer1604");
+const input = document.getElementById("answer2003");
 const msg = document.getElementById("mensagem");
 
-const respostaCorreta = "a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental";
+const respostaCorreta = "belladonna";
 
 let i = 0;
 
@@ -14,13 +14,13 @@ botao.addEventListener("click", () => {
         i = 0;
 
         setTimeout(() => {
-            window.location.href = "1405.html";
+            window.location.href = "1604.html";
         }, 1500);
     } else {
         i++;
 
         if (i >= 30) {
-            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'a belladonna é uma das plantas mais tóxicas encontradas no hemisfério oriental' (tentativa ${i})`;
+            msg.textContent = `DESISTO! JÁ É A TRIGÉSSIMA VEZ! A resposta é 'belladonna' (tentativa ${i})`;
         }
         else if (i >= 20) {
             msg.textContent = `Sooooooccccoooooorrrrrrooooooo!!!!!! (tentativa ${i})`;
