@@ -1,7 +1,7 @@
 const checkbox = document.getElementById("aceitar");
 const botao = document.getElementById("botao_iniciar");
 
-  checkbox.addEventListener("change", function() {
+  checkbox.addEventListener("change", () => {
     botao.disabled = !checkbox.checked;
 });
 document.getElementById("botao_iniciar").addEventListener("click", () => {
